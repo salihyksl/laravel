@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/','anasayfa');
 
 Route::get('/', function () {
     return view('anasayfa');
