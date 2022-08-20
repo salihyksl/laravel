@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,20 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+ 
+Route::resource('users',UsersController::class);
+
+
+
+
+
+
+/*Route::get('/anasayfa', function(){
+    return view('anasayfa');
+});
+Route::fallback(function(){
+    return view('hata');
+});
 
 Route::prefix('sayfalar')->group( function(){
 
@@ -24,9 +39,13 @@ Route::prefix('sayfalar')->group( function(){
     Route::get('/iletisim', function(){
         return view('iletisim');
     });
+
+    Route::fallback(function(){
+        return view('hata');
+    });
     
 });
-
+*/
 
 
 /*Route::redirect('/','anasayfa');
